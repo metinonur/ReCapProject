@@ -25,7 +25,7 @@ namespace DataAccess.Concrete
 
         public void Add(Car car)
         {
-           
+            _cars.Add(car); 
         }
 
         public void Delete(Car car)
@@ -39,9 +39,9 @@ namespace DataAccess.Concrete
             return _cars;
         }
 
-        public void GetByID(Car car)
+        public List<Car> GetByID(int Id)
         {
-            
+            return _cars.Where(c => c.Id == Id).ToList();
         }
 
         public void Update(Car car)
