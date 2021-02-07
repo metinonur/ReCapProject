@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{9450B536-AA5C-4F2F-91DF-38CB42A3AC60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{9450B536-AA5C-4F2F-91DF-38CB42A3AC60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{E46BE106-4D40-4337-911C-92B9949B0CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{E46BE106-4D40-4337-911C-92B9949B0CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{05796140-3567-4461-93C4-87601FAF8445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{05796140-3567-4461-93C4-87601FAF8445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcreteUI", "ConcreteUI\ConcreteUI.csproj", "{97AE7214-B645-4DC0-9FD2-87B9F88C3806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConcreteUI", "ConcreteUI\ConcreteUI.csproj", "{97AE7214-B645-4DC0-9FD2-87B9F88C3806}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
