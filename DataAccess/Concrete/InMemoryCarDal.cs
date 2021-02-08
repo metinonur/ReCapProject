@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Linq.Expressions;
+using Entities.DTOs;
 
 namespace DataAccess.Concrete
 {
@@ -53,6 +54,11 @@ namespace DataAccess.Concrete
         public List<Car> GetByID(int Id)
         {
             return _cars.Where(c => c.CarId == Id).ToList();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)

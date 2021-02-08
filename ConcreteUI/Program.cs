@@ -1,7 +1,9 @@
-﻿using Business.Concrete;
+﻿using Business.Abstract;
+using Business.Concrete;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
+using Entities.Concrete;
 using System;
 
 namespace ConcreteUI
@@ -11,11 +13,21 @@ namespace ConcreteUI
         static void Main(string[] args)
         {
             CarManager carManager = new CarManager(new EFCarDal());
+            ColorManager colorManager  = new ColorManager(new EFColorDal());
+            BrandManager brandManager = new BrandManager(new EFBrandDal());
+
             carManager.GetAll();
-            foreach (var car in carManager.GetAll())
+            foreach (var car in carManager.GetCarDetails())
             {
-                Console.WriteLine(car.CarName+" "+car.BrandId+" "+car.DailyPrice+" "+car.Description);
+                Console.WriteLine(car.CarName+" "+car.BrandName+" "+car.ColorName+" "+car.DailyPrice);
             }
+            Console.WriteLine("---------------Renk Listesi--------------");
+            foreach (var color in colorManager.GetAll())
+            {
+                Console.WriteLine(color.ColorName);
+            }
+            
+            
               
 
 
