@@ -16,10 +16,20 @@ namespace ConcreteUI
             ColorManager colorManager  = new ColorManager(new EFColorDal());
             BrandManager brandManager = new BrandManager(new EFBrandDal());
 
-            carManager.GetAll();
-            foreach (var car in carManager.GetCarDetails())
+           
+
+            var result = carManager.GetCarDetails();
+
+            if (result.Success == true)
             {
-                Console.WriteLine(car.CarName+" "+car.BrandName+" "+car.ColorName+" "+car.DailyPrice);
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.CarName + " / " + car.BrandName+" / "+car.ColorName);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
             }
             Console.WriteLine("---------------Renk Listesi--------------");
             foreach (var color in colorManager.GetAll())
