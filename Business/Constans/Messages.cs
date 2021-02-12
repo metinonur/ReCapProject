@@ -16,6 +16,13 @@ namespace Business.Constans
         public static string CarDetailListed = "Cars listed according to the requested information";
         public static string CarListedByBrandId = "Cars listed by Brand id";
         public static string CarListedByColorID = "Cars listed by Color id";
+        public static string UserAdded = "User added";
+        public static string UserUpdated = "User updated";
+        public static string UserDeleted = "User deleted";
+        public static string UserListed = "User listed";
+        public static string RentalAdded = "The rental is successful";
+        public static string RentalAddedError = "It must be delivered before the vehicle is rented.";
+        public static string RentalUpdateDate = "Date is updated successful";
 
     }
 }

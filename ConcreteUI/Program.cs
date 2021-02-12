@@ -15,6 +15,9 @@ namespace ConcreteUI
             CarManager carManager = new CarManager(new EFCarDal());
             ColorManager colorManager  = new ColorManager(new EFColorDal());
             BrandManager brandManager = new BrandManager(new EFBrandDal());
+            RentalManager rentalManager = new RentalManager(new EFRentalDal());
+            CustomerManager customerManager = new CustomerManager(new EFCustomerDal());
+            UserManager userManager = new UserManager(new EFUserDal());
 
            
 
@@ -35,28 +38,10 @@ namespace ConcreteUI
             foreach (var color in colorManager.GetAll())
             {
                 Console.WriteLine(color.ColorName);
-            }
-            
-            
-              
+            };
 
+   
 
-
-
-
-
-            //foreach (var car in carManager.GetAll())
-            //{
-            //    Console.WriteLine("Araç Numarsı : " + car.CarId);
-            //    Console.WriteLine("Marka : " + car.BrandId);
-            //    Console.WriteLine("Renk : " + car.ColorId);
-            //    Console.WriteLine("Model : " + car.ModelYear);
-            //    Console.WriteLine("Günlük Ücret : " + car.DailyPrice);
-            //    Console.WriteLine("Açıklama : " + car.Description);
-            //    Console.WriteLine("*********************************************************************");
-            //}
-
-          
         }
     }
 }

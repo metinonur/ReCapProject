@@ -33,12 +33,12 @@ namespace Business.Concrete
             }
             else
             {
-                return new SuccesResult(Messages.CarAdded);
+                return new SuccessResult(Messages.CarAdded);
             }
         }
         public IResult Delete(Car car) 
         {
-            return new SuccesResult(Messages.CarDeleted);
+            return new SuccessResult(Messages.CarDeleted);
         }
         public IResult GetCarsByBrandId(int brandId) 
         {
@@ -50,7 +50,7 @@ namespace Business.Concrete
         }
         public IResult Update(Car car)
         {
-            return new SuccesResult(Messages.CarUpdated);
+            return new SuccessResult(Messages.CarUpdated);
         }
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
