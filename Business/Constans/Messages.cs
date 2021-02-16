@@ -23,6 +23,7 @@ namespace Business.Constans
         public static string RentalAdded = "The rental is successful";
         public static string RentalAddedError = "It must be delivered before the vehicle is rented.";
         public static string RentalUpdateDate = "Date is updated successful";
+        public static string CarListedByCarId = "Cars listed by Car id";
 
     }
 }
