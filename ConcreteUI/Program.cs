@@ -35,10 +35,14 @@ namespace ConcreteUI
                 Console.WriteLine(result.Message);
             }
             Console.WriteLine("---------------Renk Listesi--------------");
-            foreach (var color in colorManager.GetAll())
+            if (result.Success == true)
             {
-                Console.WriteLine(color.ColorName);
-            };
+                foreach (var color in result.Data)
+                {
+                    Console.WriteLine(color.ColorName);
+                };
+            }
+           
 
    
 

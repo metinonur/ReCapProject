@@ -22,7 +22,7 @@ namespace Business.Constans
         public static string ColorUpdated = "Color updated";
         public static string ColorDeleted = "Color deleted";
         public static string ColorsListed = "Colors listed";
-        public static string ColorDeletedById = "Color deleted by Color id";
+        public static string ColorsListedByColorId = "Colors listed by Color id";
         //Brand messages
         public static string BrandAdded = "Brand added";
         public static string BrandUpdated = "Brand updated";
@@ -38,6 +38,8 @@ namespace Business.Constans
         public static string UserListedById = "Users listed by User id";
         //Rental messages
         public static string RentalAdded = "The rental is successful";
+        public static string RentalDeleted = "Rental deleted";
+        public static string RentalListed = "Rentals listed";
         public static string RentalAddedError = "It must be delivered before the vehicle is rented.";
         public static string RentalUpdateDate = "Date is updated successful";
         //Customer messages

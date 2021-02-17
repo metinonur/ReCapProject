@@ -11,64 +11,67 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ColorsController : ControllerBase
+    public class RentalController : ControllerBase
     {
-        IColorService _colorService;
-        public ColorsController(IColorService colorService)
+        IRentalService _rentalService;
+        public RentalController(IRentalService rentalService)
         {
-            _colorService = colorService;
+            _rentalService = rentalService;
         }
+
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-
-            var result = _colorService.GetAll();
+            var result = _rentalService.GetAll();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result.Message);
+        }
+        [HttpPost("add")]
+        public IActionResult Add(Rental rental)
+        {
+            var result = _rentalService.Add(rental);
             if (result.Success)
             {
                 return Ok(result);
             }
             return BadRequest(result);
+
+        }
+        [HttpPut("update")]
+        public IActionResult Update(int carId)
+        {
+            var result = _rentalService.UpdateReturnDate(carId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+
+        }
+        [HttpDelete("delete")]
+        public IActionResult Delete(Rental rental)
+        {
+            var result = _rentalService.Delete(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+
+
         }
 
-        [HttpGet("getbyid")]
-        public IActionResult GetById(int id)
+        [HttpGet("getrentaldetails")]
+        public IActionResult GetRentalDetailsDto(int carId)
         {
-            var result = _colorService.GetById(id);
+            var result = _rentalService.GetRentalDetailsDto(carId);
             if (result.Success)
             {
                 return Ok(result.Data);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpPost("add")]
-        public IActionResult Add(Color color)
-        {
-            var result = _colorService.Add(color);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
-        [HttpPost("delete")]
-        public IActionResult Delete(Color color)
-        {
-            var result = _colorService.Delete(color);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-        [HttpPost("update")]
-        public IActionResult Update(Color color)
-        {
-            var result = _colorService.Update(color);
-            if (result.Success)
-            {
-                return Ok(result);
             }
             return BadRequest(result);
         }
