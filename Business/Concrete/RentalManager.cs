@@ -42,6 +42,7 @@ namespace Business.Concrete
 
         public IResult Delete(Rental rental)
         {
+            _rentalDal.Delete(rental);
             return new SuccessResult(Messages.RentalDeleted);
         }
 
