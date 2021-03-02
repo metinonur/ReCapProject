@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constans
@@ -50,5 +51,6 @@ namespace Business.Constans
         public static string CustomerListedById = "Customers listed by Customer id";
         public static string ImagesAdded = "Images successfuly added";
         public static string FailAddedImageLimit = "Image limit reached!";
+        internal static string AuthorizationDenied = "Yetkiniz yok";
     }
 }
