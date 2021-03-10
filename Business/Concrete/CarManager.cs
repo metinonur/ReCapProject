@@ -62,5 +62,10 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.CarId == carId), Messages.CarListedByCarId);
         }
+
+        public IResult AddTransactionalTest(Car car)
+        {
+            return null;
+        }
     }
 }
