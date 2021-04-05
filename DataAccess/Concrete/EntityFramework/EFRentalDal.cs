@@ -17,7 +17,7 @@ namespace DataAccess.Concrete.EntityFramework
 
             using (ReCapContext context = new ReCapContext())
             {
-                var result = from re in filter is null ? context.Rentals : context.Rentals.Where(filter)
+                var result = from re in  context.Rentals 
                              join ca in context.Cars on re.CarId equals ca.CarId
                              join cus in context.Customers on re.CustomerId equals cus.Id 
                              join us in context.Users on cus.UserId equals us.Id
@@ -29,8 +29,7 @@ namespace DataAccess.Concrete.EntityFramework
                              {
                                  Id = re.Id,
                                  CarName = ca.CarName,
-                                 BrandId = bra.BrandId,
-                                 BrandName = bra.BrandName,
+                                 BrandName= bra.BrandName,
                                  CustomerName = cus.CompanyName,
                                  CarId = ca.CarId,
                                  RentDate = re.RentDate,
