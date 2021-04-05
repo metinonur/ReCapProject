@@ -51,9 +51,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Rental>>(_rentalDal.GetAll());
         }
 
-        public IDataResult<List<RentalDetailDto>> GetRentalDetailsDto(int carId)
+        public IDataResult<List<RentalDetailDto>> GetRentalDetailsDto()
         {
-            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails(x => x.CarId == carId));
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails());
         }
 
         public IResult UpdateReturnDate(int carId)
